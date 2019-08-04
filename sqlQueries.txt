@@ -1,0 +1,56 @@
+select * from TBl_EMP --> all khool dega matlab poora khol dega                                   //query
+select EMP_ID,EMP_NAME,salary from table name -> jitne name diye hain utna khol dega              //query
+agr duplicate row ko aik martaba bulana he to hum distinct use karenge 
+select distinct dsg from tbl_emr;                                                                 //query
+select count(emp_id)  from tbl_emr; ye total id bata dega			        	    //query
+SELECT Max(salary) from tbl_emr; is se hum salary me jo sab se ziada he wo bta denge		    //query
+SELECT min(salary) from tbl_emr; is se hum salary me jo sab se kam he wo bta denge                  //query
+SELECT top 5 * from tbl_emr;  shuru k top 5 logon ka data dikha dega                               //query
+SELECT sum(salary) from tbl_emr; sare logon ki salary ko sum kr dega
+SELECT avg(salary) from tbl_emr;
+select * from tbl_emp order by emp_name,salery; yahan wo sorting kr dega 			//query
+where * from tbl_emr where salary <>5000 where mean if else qk se condition rakhta he
+>
+>=
+<
+<=
+<>
+=
+!=
+select * from tbl_emr where emp_name like '*ali' = is ka matlab ye he k agr pehle kuch bhi ho lkn agr baad main ali ho to us ko compare ker le ga
+select * from tbl_emr where emp_name = 'ali'     = is ka matlab ye he k sare ali wale name ko compare kr lega
+select * from tbl_emr where emp_name like '*ali*' = bus jahan bhi ali hoga wahan ajai ga
+select * from tbl_emr where emp_name not like '*ali'= is ka matlab jo ali wale name honge wo show nai honge baqi names show ho jainge
+select * from tbl_emr where city in  ('karachi','lahore') =  is ka matlab jo city karachi or lahre k honge un ka data ajai ga
+select * from tbl_emr where emp_jod between #1-jan-2018# and #31-dec- 2019# jo in date k darmiyan honge wo date wale data print ho jainge
+select * from tbl_emr where salary between 5000 and 10000 and city = 'lahore' is main ye hoga k 5000 se 10000 se le kr btana or wo lahore k hon to bta de
+select * from tbl_emr where salary between 5000 and 10000 and emp_name not like  'ali'; pora uper jaisa hoga lkn jo ali wale name nai honge sirf wo ai ga
+select city from tbl_emr  group by city ye jo aik se ziada hoga use aik martaba dikhai ga
+select city,count(city) from tbl_emr  group by city ye wo bta ga k city name yana karachi kitni martaba aya 1 ya do wo btata he ssare country k count kr k
+select city,count(city) from tbl_emr group by city having count(city)>2  hum is main where nai lagainge qk is main where nai lag sakta or iski jaga hum having laga lete hain or agr count barh 
+jai to wo use show kra de
+
+SELECT *
+FROM tbl_emr
+WHERE salary between 1 and 500000  and dsg = ('programmer') and  city = 'karachi' or city = 'lahore'; 
+
+26/01/1019
+
+SELECT emp_id, emp_name, (select dpt_name from tbl_dpt where emp_id = dpt_id), salary from tbl_emr
+SELECT emp_id, emp_name, (select des_name from tbl_designation where emp_id = des_id), salary from tbl_emr
+select * from tbl_emr where dpt_id=(select dpt_id from tbl_dpt where dpt_name = 'csse')
+select * from tbl_emr where dpt_id is not null
+select * from tbl_emr where dpt_id is null
+
+SELECT *
+FROM tbl_emr
+WHERE dpt_id in (2,3,4);
+
+
+//new
+UPDATE tbl_qty_sum SET tbl_qty_sum.ff_qty = '4'
+WHERE (((tbl_qty_sum.[id])=1));
+
+UPDATE tbl_qty_sum
+SET ff_qty = 4
+WHERE ID = 1;
